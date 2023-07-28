@@ -52,6 +52,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "corsheaders.middleware.CorsMiddleware",
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = "backend.urls"
@@ -108,15 +109,21 @@ CORS_ORIGIN_CREDENTIALS = True
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
     'http://localhost:3001',
+    'http://127.0.0.1:3000'
 
 
 ]
 CORS_ORIGIN_REGEX_WHITELIST = [
     'http://localhost:3000',
     'http://localhost:3001',
+    'http://127.0.0.1:3000',
 
 ]
-
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+    'http://localhost:3001',
+    'http://127.0.0.1:3000',
+]
 
 
 # Internationalization

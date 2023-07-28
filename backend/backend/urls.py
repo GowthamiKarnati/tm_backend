@@ -18,7 +18,7 @@ from django.contrib import admin
 from todo import views                            # add this
                   # add this
 from django.urls import path, include , re_path                # add this
-
+from . import views
  # add this
 
 # from django.urls import path  - DELETE THIS
@@ -26,6 +26,7 @@ from django.urls import path, include , re_path                # add this
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('todo.urls')),
+    
     
 
 
